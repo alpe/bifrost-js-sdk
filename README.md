@@ -8,6 +8,17 @@ JS SDK for [Bifrost](https://github.com/stellar/go/tree/master/services/bifrost)
 <script src="bifrost.min.js"></script>
 ```
 
+## Development
+* How to build sdk:
+```
+yarn run gulp
+```
+* How to build web app:
+```bash
+docker build -t mybifrostweb .
+docker run -p8080:8080 --rm --read-only --volume $(pwd)/env.js:/web/assets/env.js:ro mybifrostweb
+```
+
 ## API
 
 ### `Bifrost.Session.constructor(params) => Bifrost.Session`
